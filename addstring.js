@@ -16,7 +16,9 @@ function string_add() {
     for (var h = 1; h <= sumString.length; h++) {
       sumArray.push(sumString.charAt(sumString.length - h));
     }
-    sumString = ''; // Deleted so it can be updated later, must be deleted after it's copied, and before you make a new sum.
+    sumString = '';
+    // Deleted so it can be updated later.
+    // Must be deleted after it's copied, and before you make a new sum.
 
     // Add each character into an array starting first digit, Example: in "12", the first digit is 2.
     for (var h = 1; h <= numStrLength; h++) {
@@ -36,7 +38,7 @@ function string_add() {
         numberSum = numberSum - 10;
         carryOver = 1;
       } else {
-        carryOver = 0
+        carryOver = 0;
       }
       sumString = numberSum.toString() + sumString;
     }
